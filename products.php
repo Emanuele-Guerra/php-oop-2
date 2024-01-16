@@ -1,6 +1,5 @@
 <?php
-require __DIR__ . "/dogs.php";
-require __DIR__ . "/cats.php";
+
 class product
 {
     public $category;
@@ -24,20 +23,38 @@ class product
 // ------------------------------------------------------------> 
 
 
-// class food extends product
-// {
-//     public $size;
-//     public $type;
-// };
-// class games extends product
-// {
-//     public $shape;
-//     public $color;
-    
-// };
-// class accessories extends product
-// {
-//     public $size;
-//     public $isOutdoor;
-//     public $isIndoor;
-// }
+class food extends product
+{
+    public $size;
+    public $type;
+
+    public function __construct($size, $type)
+    {
+        $this->size = $size;
+        $this->type = $type;
+    }
+};
+class games extends product
+{
+    public $shape;
+    public $color;
+
+    public function __construct($shape, $color)
+    {
+        $this->shape = $shape;
+        $this->color = $color;
+    }
+};
+class accessories extends product
+{
+    public $size;
+    public $isOutdoor;
+    public $isIndoor;
+
+    public function __construct($size, $isOutdoor, $isIndoor)
+    {
+        $this->size = $size;
+        $this->isOutdoor = $isOutdoor;
+        $this->isIndoor = $isIndoor;
+    }
+}
